@@ -1,5 +1,6 @@
 package com.citizenquest.citizenQuest;
 
+import com.citizenquest.citizenQuest.Model.Citizen;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,11 @@ public class HelloController {
     @GetMapping ("/Status")
     public String serverStatus(){
         return " the Server is Running. Quest system is running. ";
+
+    }
+    @GetMapping ("/Citizen/demo")
+    public Citizen demoCitizen(){
+        return new Citizen("0000001","Amine Ben Hammouda","Sousse",0,1);
 
     }
 
