@@ -1,8 +1,10 @@
-package com.citizenquest.citizenQuest;
+package com.citizenquest.citizenQuest.Controller;
 
 import com.citizenquest.citizenQuest.Model.Citizen;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 public class HelloController {
@@ -12,16 +14,16 @@ public class HelloController {
         return "Welcome to Civic-Pulse ";
 
     }
-    @GetMapping ("/Status")
+    @GetMapping ("/status")
     public String serverStatus(){
         return " the Server is Running. Quest system is running. ";
 
     }
-    @GetMapping ("/Citizen/demo")
-    public Citizen demoCitizen(){
-        return new Citizen("0000001","Amine Ben Hammouda","Sousse",0,1);
-
+   @GetMapping("/api/version")
+    public String getVersion() {
+        return "CitizenQuest v0.0.1";
     }
+    
 
 
 }

@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/citizens
+Content-Type: application/json
+
+{
+  "firstName": "Amine",
+  "lastName": "Ben Hammouda",
+  "userName": "amine_sousse",
+  "email": "amine@test.com",
+  "city": "Sousse",
+  "xp": 0,
+  "level": 1,
+  "pointsBalance": 0
+}
